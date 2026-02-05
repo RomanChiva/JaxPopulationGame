@@ -1,0 +1,2 @@
+[2026-02-04 13:10:34,617][jax._src.xla_bridge][INFO] - Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: dlopen(libtpu.so, 0x0001): tried: 'libtpu.so' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibtpu.so' (no such file), '/opt/miniconda3/bin/../lib/libtpu.so' (no such file), '/usr/lib/libtpu.so' (no such file, not in dyld cache), 'libtpu.so' (no such file)
+[2026-02-04 13:10:34,617][jax._src.xla_bridge][WARNING] - Platform 'METAL' is experimental and not all JAX functionality may be correctly supported!

@@ -1,0 +1,31 @@
+defaults:
+  - _self_
+
+# Experiment
+ALGO: "online_sarsa" # ppo, online_q, online_sarsa, average_batch_q, wolf
+SEED: 987875847
+NUM_SEEDS: 1 # Number of parallel runs (vmap over training)
+
+# Environment
+NUM_AGENTS: 50 # Total population size
+NORM_STRING: "1101"
+B_BENEFIT: 2.0
+C_COST: 1.0
+EPISODE_LENGTH: 512
+OBS_TYPE: "population" # opponent, standard, population
+
+# Training Loop Generic
+TOTAL_EPISODES: 2000 # Total duration in episodes
+EPISODES_PER_UPDATE: 5 # For batch mode: Collect N episodes before updating
+
+# Algorithms specific config (Legacy or specific)
+# For PPO (Batch Mode)
+BATCH_SIZE: 128 # For Batch Q or PPO mini-batches
+# NUM_UPDATES / NUM_STEPS are legacy, we use TOTAL_EPISODES / EPISODES_PER_UPDATE now.
+
+
+# Logging
+USE_WANDB: true
+WANDB_PROJECT: "JaxPopulationGames"
+WANDB_MODE: "online"
+
